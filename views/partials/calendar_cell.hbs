@@ -7,10 +7,10 @@
             leave_cell_pended
         {{else}}
             leave_cell
-            {{day.leave_color_class_morning}}
         {{/if}}
     {{/if}}
-    {{# if day.is_current_day }}current_day_cell{{/if}}
+    {{# if day.is_current_day }}current_day_cell{{/if}}"
+    style="background-color: {{day.leave_color_value_afternoon}};
 ">
 <span
   {{#unless day.is_bank_holiday}}
@@ -57,8 +57,8 @@
             leave_cell_pended
         {{else}}
             leave_cell
-            {{day.leave_color_class_afternoon}}
         {{/if}}
     {{/if}}
-    {{# if day.is_current_day }}current_day_cell{{/if}}
-"></td>
+    {{# if day.is_current_day }}current_day_cell{{/if}}"
+    style="background-color: {{day.leave_color_value_afternoon}};">
+</td>
