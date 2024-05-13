@@ -3,7 +3,12 @@
 <h1>Employee calendar</h1>
 
 <div class="row">
-  <div class="col-md-6 lead">{{logged_user.name}} {{logged_user.lastname}}'s calendar for {{current_year}}</div>
+  <div class="col-md-6 lead">
+    {{#if current_user.employee_num }}
+    <strong>{{current_user.employee_num }} | </strong>
+    {{/if}}
+    {{logged_user.name}} {{logged_user.lastname}}'s calendar for {{current_year}}
+  </div>
   <div class="col-md-6">
   </div>
 </div>
@@ -79,6 +84,8 @@
       <dd><em>Allowance in {{current_year}}:</em><span class="pull-right"> {{
           user_allowance.total_number_of_days_in_allowance }} days</span>
       <dd>
+      <dd><em>Work Hours:</em> <span class="pull-right">{{ current_user.work_hours }}</span></dd>
+      <dd><em>Break Times:</em> <span class="pull-right">{{ current_user.break_times }}</span></dd>
     </dl>
   </div>
 

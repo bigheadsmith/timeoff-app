@@ -14,3 +14,4 @@ docker-compose.yaml
 *.sqlite
 *.DS_Store
 t/integration/test.csv
+/.vscode
