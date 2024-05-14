@@ -160,7 +160,7 @@ td.calendar_cell {
 }
 td.calendar_cell span {
   position: relative;
-  left: 9px;
+  left: 50%;
   top: -1px;
   display: block;
   text-align: center;
@@ -286,3 +286,14 @@ div.feeds-holder {
   font-weight: bolder;
 }
 
+/* Holiday Type Colour Picker */
+.input-group-addon {
+  &.color-picker {
+    padding: 0;
+
+    .picker {
+      border: 0;
+      padding: 0;
+    }
+  }
+}
