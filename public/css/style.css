@@ -257,6 +257,13 @@ div.feeds-holder {
 .secondary-leave-type-statistics dd {
   padding-left: 10px;
   padding-right: 10px;
+  overflow: hidden;
+}
+
+.secondary-leave-type-statistics dd span {
+  clear: right;
+  text-align: right;
+  white-space: pre-wrap;
 }
 
 .calendar-section-caption {
