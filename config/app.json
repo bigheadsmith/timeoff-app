@@ -11,6 +11,7 @@
   "contact": {
     "email": "email@addr.ess"
   },
+  "smtp_require_auth": true,
   "smtp": {
     "host": "localhost",
     "port": 25,

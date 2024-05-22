@@ -136,6 +136,7 @@ docker compose up --build -d
 | SMTP_HOST                 | Host of the smtp server                                      | localhost       |
 | SMTP_PORT                 | Port of the smtp server                                      | 25              |
 | SMTP_REQUIRE_TLS          | Use STARTTLS                                                 | false           |
+| SMTP_REQUIRE_AUTH         | Sets whether the SMTP server requires authentication         | true            |
 | SMTP_AUTH_USER            | Username for the smtp server. Leave blank or comment for no auth |             |
 | SMTP_AUTH_PASS            | Password for the smtp server                                 |             |
 | ** SESSION STORAGE SETTINGS **    |                                                              |                 |
