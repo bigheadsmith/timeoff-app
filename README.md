@@ -104,7 +104,7 @@ docker compose up --build -d
 
 | Variable                  | Description                                                  | Default value   |
 | ------------------------- | ------------------------------------------------------------ | --------------- |
-| ** APP SETTINGS **        |                                                              |                 |
+| **APP SETTINGS**          |                                                              |                 |
 | NODE_ENV                  | Environment of NodeJs                                        | development     |
 | PORT                      | Port of the application                                      | 3000            |
 | LOGIN_DEFAULT             | Display the default login form                               | true            |
@@ -118,7 +118,7 @@ docker compose up --build -d
 | FORCE_TO_EXPLICITLY_SELECT_TYPE_WHEN_REQUESTING_NEW_LEAVE |                              | false           |
 | LOCALE_CODE_FOR_SORTING   |                                                              | en              |
 | GOOGLE_ANALYTICS_TRACKER  | Google Analytics tracker code                                |                 |
-| ** DATABASE SETTINGS **   |                                                              |                 |
+| **DATABASE SETTINGS**     |                                                              |                 |
 | DB_DATABASE               | Database name                                                | timeoff-db      |
 | DB_USER                   | Database username                                            | timeoff-user    |
 | DB_PASSWORD               | Database password                                            | changeme        |
@@ -130,7 +130,7 @@ docker compose up --build -d
 | DB_POOL_MIN               | Minimum number of connection in pool                         | 0               |
 | DB_POOL_ACQUIRE           | The maximum time, in milliseconds, that pool will try to get connection before throwing error | 60000           |
 | DB_POOL_IDLE              | The maximum time, in milliseconds, that a connection can be idle before being released. | 10000           |
-| ** EMAIL SETTINGS **      |                                                              |                 |
+| **EMAIL SETTINGS**        |                                                              |                 |
 | SEND_EMAIL                | False=write to email audit but do not send email             | false           |
 | SMTP_FROM                 | Sender email                                                 | email@test.com  |
 | SMTP_HOST                 | Host of the smtp server                                      | localhost       |
@@ -139,16 +139,16 @@ docker compose up --build -d
 | SMTP_REQUIRE_AUTH         | Sets whether the SMTP server requires authentication         | true            |
 | SMTP_AUTH_USER            | Username for the smtp server. Leave blank or comment for no auth |             |
 | SMTP_AUTH_PASS            | Password for the smtp server                                 |             |
-| ** SESSION STORAGE SETTINGS **    |                                                              |                 |
+| **SESSION STORAGE SETTINGS**      |                                                              |                 |
 | SESSIONS_SECRET           | Secret for the sessions                                      |                 |
 | SESSIONS_STORE            | Storage for the sessions (`sequelize`,`redis`)               | sequelize       |
 | SESSIONS_REDIS_HOST       | Redis hostname                                               | localhost       |
 | SESSIONS_REDIS_PORT       | Redis port                                                   | 6379            |
-| ** SLACK SETTINGS **      |                                                              |                 |
+| **SLACK SETTINGS**        |                                                              |                 |
 | SLACK_TOKEN               | If set, the Slack token to send message                      |                 |
 | SLACK_BOT_NAME            | Name of the bot on Slack                                     |                 |
 | SLACK_ICON_URL            | Icon of the bot on Slack                                     |                 |
-| ** GOOGLE LOGIN SETTINGS ** |                                                              |                 |
+| **GOOGLE LOGIN SETTINGS**   |                                                              |                 |
 | LOGIN_GOOGLE              | Enable the authentication with Google                        | false           |
 | GOOGLE_AUTH_CLIENTID      | Google Auth client ID                                        |                 |
 | GOOGLE_AUTH_CLIENTSECRET  | Google Auth client secret                                    |                 |
