@@ -118,7 +118,8 @@ app.use(function(req, res, next) {
   res.locals.logged_user = req.user
   res.locals.url_to_the_site_root = '/'
   // set header from env or default to static string
-  res.locals.header_title = process.env.HEADER_TITLE || 'Time Off Requests'
+  res.locals.branding_title = baseHelpers.get_branding_title
+  res.locals.branding_contactemail = baseHelpers.get_branding_contactemail
   // For book leave request modal
   res.locals.booking_start = today
   res.locals.booking_end = today

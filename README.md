@@ -110,12 +110,14 @@ docker compose up --build -d
 | LOGIN_DEFAULT             | Display the default login form                               | true            |
 | BRANDING_URL              | URL of the application                                       | http://app.timeoff.management/ |
 | BRANDING_WEBSITE          | URL of the company's website                                 | http://timeoff.management/ |
-| HEADER_TITLE              | App title                                                    | Timeoff.Management |
-| CONTACT_EMAIL_ADDRESS     | App contact email address                                    | email@ddre.ss   |
-| OPTIONS_REGISTRATION      | Allows creation of company account. Set to false after setup | true            |
+| BRANDING_TITLE            | App title                                                    | Timeoff.Management |
+| BRANDING_CONTACTEMAIL     | App contact email address                                    | email@ddre.ss   |
+| OPTIONS_ALLOWREGISTRATION | Allows creation of company account. Set to false after setup | true            |
+| OPTIONS_SENDEMAIL         | False=write to email audit but do not send email             | false           |
+| OPTIONS_FORCELEAVESELECT  | Forces user to select leave type instead of default          | false           |
+| OPTIONS_LOCALECODE        |                                                              | en              |
 | CRYPTO_SECRET             | Secret for password hashing                                  | changeme        |
 | API_KEY                   |                                                              |                 |
-| FORCE_TO_EXPLICITLY_SELECT_TYPE_WHEN_REQUESTING_NEW_LEAVE |                              | false           |
 | LOCALE_CODE_FOR_SORTING   |                                                              | en              |
 | GOOGLE_ANALYTICS_TRACKER  | Google Analytics tracker code                                |                 |
 | **DATABASE SETTINGS**     |                                                              |                 |
@@ -131,12 +133,11 @@ docker compose up --build -d
 | DB_POOL_ACQUIRE           | The maximum time, in milliseconds, that pool will try to get connection before throwing error | 60000           |
 | DB_POOL_IDLE              | The maximum time, in milliseconds, that a connection can be idle before being released. | 10000           |
 | **EMAIL SETTINGS**        |                                                              |                 |
-| SEND_EMAIL                | False=write to email audit but do not send email             | false           |
 | SMTP_FROM                 | Sender email                                                 | email@test.com  |
 | SMTP_HOST                 | Host of the smtp server                                      | localhost       |
 | SMTP_PORT                 | Port of the smtp server                                      | 25              |
 | SMTP_REQUIRE_TLS          | Use STARTTLS                                                 | false           |
-| SMTP_REQUIRE_AUTH         | Sets whether the SMTP server requires authentication         | true            |
+| SMTP_AUTH_REQUIRED        | Sets whether the SMTP server requires authentication         | true            |
 | SMTP_AUTH_USER            | Username for the smtp server. Leave blank or comment for no auth |             |
 | SMTP_AUTH_PASS            | Password for the smtp server                                 |             |
 | **SESSION STORAGE SETTINGS**      |                                                              |                 |
@@ -201,7 +202,7 @@ There are few options to configure an installation.
 Given the software could be installed for company with employees with non-English names there might be a need to
 respect the alphabet while sorting customer entered content.
 
-For that purpose the application config file has `locale_code_for_sorting` entry.
+For that purpose the application config file has `options_localecode` entry.
 By default the value is `en` (English). One can override it with other locales such as `cs`, `fr`, `de` etc.
 
 ### Force employees to pick type each time new leave is booked

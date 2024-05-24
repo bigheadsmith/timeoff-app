@@ -38,7 +38,7 @@
     <dl>
       {{#with current_user }}
       <dt data-tom-days-available-in-allowance>{{ ../user_allowance.number_of_days_available_in_allowance }}</dt>
-      {{#if user_allowance.nominal_personal}}
+      {{#if ../user_allowance.nominal_personal}}
       <dd>Personal remaining: {{ ../user_allowance.total_personal_available }}</dd>
       {{/if}}
       <dd>out of <span data-tom-total-days-in-allowance>{{ ../user_allowance.total_number_of_days_in_allowance }}</span>
