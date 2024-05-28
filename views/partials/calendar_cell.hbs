@@ -63,7 +63,7 @@
             leave_cell
         {{/if}}
     {{/if}}
-    {{# if day.is_current_day }}current_day_cell{{/if}}"
+    {{#if day.is_current_day }}current_day_cell{{/if}}"
     {{#if day.is_leave_afternoon }}
         {{#unless day.is_new_leave}}
             style="background-color: {{day.leave_color_value_afternoon}};"
