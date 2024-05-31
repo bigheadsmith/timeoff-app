@@ -17,11 +17,11 @@
 
 <div class="row">
   <div class="col-xs-3">
-    <a class="btn btn-default" href="/calendar/?year={{previous_year}}"><span aria-hidden="true"
+    <a class="btn btn-default" href="/calendar/?year={{previous_year}}&show_full_year=1"><span aria-hidden="true"
         class="fa fa-chevron-left"></span> {{previous_year}} </a>
   </div>
   <div class="col-xs-3">
-    <a class="btn btn-default pull-right" href="/calendar/?year={{next_year}}">{{next_year}} <span aria-hidden="true"
+    <a class="btn btn-default pull-right" href="/calendar/?year={{next_year}}&show_full_year=1">{{next_year}} <span aria-hidden="true"
         class="fa fa-chevron-right"></span></a>
   </div>
 </div>
@@ -86,8 +86,12 @@
       <dd><em>Allowance in {{current_year}}:</em><span class="pull-right"> {{
           user_allowance.total_number_of_days_in_allowance }} days</span>
       <dd>
+      {{#if current_user.work_hours }}
       <dd><em>Work Hours:</em> <span class="pull-right">{{ current_user.work_hours }}</span></dd>
+      {{/if}}
+      {{#if current_user.break_times }}
       <dd><em>Break Times:</em> <span class="pull-right">{{ current_user.break_times }}</span></dd>
+      {{/if}}
     </dl>
   </div>
 
