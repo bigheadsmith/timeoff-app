@@ -132,6 +132,8 @@ docker compose up --build -d
 | DB_POOL_MIN               | Minimum number of connection in pool                         | 0               |
 | DB_POOL_ACQUIRE           | The maximum time, in milliseconds, that pool will try to get connection before throwing error | 60000           |
 | DB_POOL_IDLE              | The maximum time, in milliseconds, that a connection can be idle before being released. | 10000           |
+| DB_RETRY_MAX              | Maximum attempts the app will retry when connecting to the database | 5               |
+| DB_RETRY_TIMEOUT          | Maximum time app attempt when connecting to the database     | 60000               |
 | **EMAIL SETTINGS**        |                                                              |                 |
 | SMTP_FROM                 | Sender email                                                 | email@test.com  |
 | SMTP_HOST                 | Host of the smtp server                                      | localhost       |
