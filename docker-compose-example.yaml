@@ -1,0 +1,34 @@
+## Copy `.env.example`, save as `.env`, modify as required
+## Copy this file, save as 'docker-compose.yaml', modify as required
+## Run `docker compose up -d --build`
+
+services:
+  # TIMEOFF APP
+  web:
+    container_name: timeoffapp
+    build: .
+    environment:
+      DATABASE_URL: ${DB_DIALECT}://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_DATABASE}
+    ports:
+      - "${PORT}:${PORT}"
+    volumes:
+      - ./.env:/app/.env
+    restart: unless-stopped
+
+  # DATABASE
+  postgres:
+    image: postgres:latest
+    container_name: postgres-timeoff
+    environment:
+      ### SEE .env
+      POSTGRES_DB: ${DB_DATABASE}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - timeoff-postgres-data:/var/lib/postgresql/data
+    # Uncomment for external access
+    #ports:
+    #  - "${DB_PORT}:5432"
+
+volumes:
+  timeoff-postgres-data:

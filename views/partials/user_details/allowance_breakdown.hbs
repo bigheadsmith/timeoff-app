@@ -27,6 +27,7 @@
         id='nominalAllowancePart'
       >{{ user_allowance.number_of_regular_allowance }}</span>
     </dd>
+    {{#if user_allowance.nominal_personal}}
     <dd>
       <em>Personal Allowance</em>
       <span class="pull-right"
@@ -37,7 +38,9 @@
         id='nominalPersonalPart'
       >{{ user_allowance.nominal_personal }}</span>
     </dd>
+    {{/if}}
     {{#if logged_user.admin }}
+      {{#if user_allowance.carry_over }}
       <dd>
         <em>Carried over from {{#if previous_year}}{{previous_year}}{{else}}previous year{{/if}}</em>
         <span class="pull-right"
@@ -48,6 +51,8 @@
           id="allowanceCarriedOverPart"
         >{{ user_allowance.carry_over }}</span>
       </dd>
+      {{/if}}
+      {{#if user_allowance.manual_adjustment }}
       <dd>
         <em>Individual adjustment</em>
         <span class="pull-right"
@@ -57,6 +62,7 @@
           data-trigger="focus hover"
         >{{ user_allowance.manual_adjustment }}</span>
       </dd>
+      {{/if}}
     {{/if}}
     {{#if user_allowance.employement_range_adjustment}}
     <dd>
