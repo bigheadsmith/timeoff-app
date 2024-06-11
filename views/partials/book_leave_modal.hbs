@@ -23,12 +23,20 @@
           <div class="form-group">
             <label for="leave_type" class="control-label">Leave type:</label>
             <select class="form-control" id="leave_type" name="leave_type" required>
-            {{# is_force_to_explicitly_select_type_when_requesting_new_leave}}
+            {{# is_forceLeaveSelect}}
               <option disabled selected value>-- select an option --</option>
-            {{/ is_force_to_explicitly_select_type_when_requesting_new_leave}}
-            {{#each logged_user.company.leave_types }}
-              <option value={{this.id}} data-tom="{{this.name}}" data-tom-index={{@index}}>{{this.name}}</option>
-            {{/each}}
+            {{/ is_forceLeaveSelect}}
+            {{# if_equal logged_user.supervised_users.length 1 }}
+              {{#each logged_user.company.leave_types }}
+                {{#unless this.manager_only}}
+                  <option value={{this.id}} data-tom="{{this.name}}" data-tom-index={{@index}}>{{this.name}}</option>
+                {{/unless}}
+              {{/each}}
+            {{else}}
+              {{#each logged_user.company.leave_types }}
+                <option value={{this.id}} data-tom="{{this.name}}" data-tom-index={{@index}}>{{this.name}}</option>
+              {{/each}}
+            {{/ if_equal}}
             </select>
           </div>
 
@@ -38,8 +46,8 @@
               <div class="col-md-5">
                 <select class="form-control" name="from_date_part">
                   <option value="1" selected="selected">All day</option>
-                  <option value="2">Morning</option>
-                  <option value="3">Afternoon</option>
+                  <option value="2">AM</option>
+                  <option value="3">PM</option>
                 </select>
               </div>
               <div class="col-md-7">
@@ -57,8 +65,8 @@
               <div class="col-md-5">
                 <select class="form-control" name="to_date_part">
                   <option value="1" selected="selected">All day</option>
-                  <option value="2">Morning</option>
-                  <option value="3">Afternoon</option>
+                  <option value="2">AM</option>
+                  <option value="3">PM</option>
                 </select>
               </div>
               <div class="col-md-7">
