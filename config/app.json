@@ -23,7 +23,7 @@
     "auth": {
       "user": "",
       "pass": "",
-      "required": false
+      "required": true
     }
   },
   "sessions": {
@@ -41,9 +41,7 @@
     "auth": {
       "clientId": "123",
       "clientSecret": "123",
-      "domains": [
-        "mydomain.com"
-      ]
+      "domains": ["mydomain.com"]
     }
   },
   "slack": {
