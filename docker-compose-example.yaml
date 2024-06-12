@@ -5,7 +5,7 @@
 services:
   # TIMEOFF APP
   web:
-    container_name: timeoffapp
+    container_name: ${COMPOSE_PROJECT_NAME}
     build: .
     environment:
       DATABASE_URL: ${DB_DIALECT}://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_DATABASE}
@@ -18,17 +18,17 @@ services:
   # DATABASE
   postgres:
     image: postgres:latest
-    container_name: postgres-timeoff
+    container_name: postgres-timeoff-dev
     environment:
       ### SEE .env
       POSTGRES_DB: ${DB_DATABASE}
       POSTGRES_USER: ${DB_USER}
       POSTGRES_PASSWORD: ${DB_PASSWORD}
     volumes:
-      - timeoff-postgres-data:/var/lib/postgresql/data
+      - postgres-data:/var/lib/postgresql/data
     # Uncomment for external access
     #ports:
     #  - "${DB_PORT}:5432"
 
 volumes:
-  timeoff-postgres-data:
+  postgres-data:
