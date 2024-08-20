@@ -279,6 +279,10 @@ td.leave_cell_pended {
   white-space: nowrap;
   overflow: hidden;
   display: inline-block;
+  position: sticky;
+  left: 0;
+  background: white;
+  z-index: 999;
 }
 
 .main-row_header {

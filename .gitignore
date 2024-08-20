@@ -15,3 +15,5 @@ docker-compose.yaml
 *.DS_Store
 t/integration/test.csv
 .vscode/
+public/*icon*.png
+public/favicon.ico
