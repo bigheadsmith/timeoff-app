@@ -223,7 +223,7 @@ td.calendar_cell span {
 }
 
 td.current_day_cell {
-  background: #ffcdd2;
+  background: #000000;
   color: #ffffff;
 }
 
@@ -356,6 +356,31 @@ div.feeds-holder {
   height: 10px;
   margin-right: 8px;
   vertical-align: middle;
+}
+
+.day-color-legend {
+  text-align: center;
+  padding: 10px 0;
+}
+.day-color-legend span.day-color {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 8px;
+  vertical-align: middle;
+  border: 1px solid #000000;
+}
+.day-color-legend span.day-today {
+  background-color: #000000;
+}
+.day-color-legend span.day-nonWorking {
+  background-color: #f5f7f8;
+}
+.day-color-legend span.day-bankHoliday {
+  background-color: #31b0d5;
+}
+.day-color-legend span.day-text {
+  margin-right: 16px;
 }
 
 /* Fix for issue with modal scrollings on mobiles */
