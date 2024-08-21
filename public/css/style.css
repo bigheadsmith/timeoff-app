@@ -350,6 +350,14 @@ div.feeds-holder {
   font-size: large;
 }
 
+.leave-color-icon {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
 /* Fix for issue with modal scrollings on mobiles */
 @media (max-width: 768px) {
   body.modal-open {
