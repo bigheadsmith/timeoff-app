@@ -201,6 +201,10 @@ label.label-plain {
 
 /* styling calendar*/
 
+$currentDay-color: #000000;
+$nonWorkingDay-color: #f5f7f8;
+$bankHoliday-color: #31b0d5;
+
 .calendar_month {
   width: 100%;
 }
@@ -248,14 +252,14 @@ td.calendar_cell span {
   z-index: 10;
 }
 td.current_day_cell {
-  background: #ffcdd2;
+  background: $currentDay-color;
   color: #ffffff;
 }
 td.weekend_cell {
-  background: $selected-item-background;
+  background: $nonWorkingDay-color;
 }
 td.bank_holiday_cell {
-  background: #31b0d5;
+  background: $bankHoliday-color;
   color: #ffffff;
 }
 td.leave_cell {
@@ -372,6 +376,31 @@ div.feeds-holder {
   height: 10px;
   margin-right: 8px;
   vertical-align: middle;
+}
+
+.day-color-legend{
+  text-align: center;
+  padding: 10px 0;
+  span.day-color{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 8px;
+    vertical-align: middle;
+    border: 1px solid #000000;
+  }
+  span.day-today {
+    background-color: $currentDay-color;
+  }
+  span.day-nonWorking {
+    background-color: $nonWorkingDay-color;
+  }
+  span.day-bankHoliday {
+    background-color: $bankHoliday-color;
+  }
+  span.day-text{
+    margin-right: 16px;
+  }
 }
 
 /* Fix for issue with modal scrollings on mobiles */
