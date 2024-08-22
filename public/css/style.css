@@ -363,11 +363,13 @@ div.feeds-holder {
   text-align: center;
   padding: 10px 0;
 }
+.day-color-legend dt {
+  padding-bottom: 10px;
+}
 .day-color-legend span.day-color {
   display: inline-block;
   width: 15px;
   height: 15px;
-  margin-right: 8px;
   vertical-align: middle;
   border: 1px solid #000000;
 }
@@ -379,9 +381,6 @@ div.feeds-holder {
 }
 .day-color-legend span.day-bankHoliday {
   background-color: #31b0d5;
-}
-.day-color-legend span.day-text {
-  margin-right: 16px;
 }
 
 /* Fix for issue with modal scrollings on mobiles */

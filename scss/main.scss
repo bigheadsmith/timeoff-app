@@ -382,11 +382,13 @@ div.feeds-holder {
 .day-color-legend{
   text-align: center;
   padding: 10px 0;
+  dt {
+    padding-bottom: 10px;
+  }
   span.day-color{
     display: inline-block;
     width: 15px;
     height: 15px;
-    margin-right: 8px;
     vertical-align: middle;
     border: 1px solid #000000;
   }
@@ -398,9 +400,6 @@ div.feeds-holder {
   }
   span.day-bankHoliday {
     background-color: $bankHoliday-color;
-  }
-  span.day-text{
-    margin-right: 16px;
   }
 }
 
