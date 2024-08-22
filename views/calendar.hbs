@@ -111,7 +111,7 @@
 {{/if}}
 
 <div class="row main-row_header">
-  <div class="col-md-12">Calendar <a href="/calendar/feeds/" data-toggle="tooltip" data-placement="right"
+  <div id="user-calendar" class="col-md-12">Calendar <a href="/calendar/feeds/" data-toggle="tooltip" data-placement="right"
       title="Export absences  to external calendars"><span class="fa fa-rss"></span></a></div>
 </div>
 
@@ -135,21 +135,35 @@
   </div>
   <div class="col-xs-12 calendar-section-caption">
     {{# unless show_full_year}}
-    <a class="btn btn-default" href="/calendar/?show_full_year=1">More... &nbsp;<span class="fa fa-plus"></span></a>
+    <a class="btn btn-default" href="/calendar/?show_full_year=1#user-calendar">More... &nbsp;<span class="fa fa-plus"></span></a>
     {{else}}
-    <a class="btn btn-default" href="/calendar/">Less... &nbsp;<span class="fa fa-minus"></span></a>
+    <a class="btn btn-default" href="/calendar/#user-calendar">Less... &nbsp;<span class="fa fa-minus"></span></a>
     {{/unless}}
   </div>
 </div>
 
 <div class="row day-color-legend">
-  <div class="col-xs-2">&nbsp;</div>
-  <div class="col-xs-8">
-    <span class="day-color day-today"></span><span class="day-text">Today</span>
-    <span class="day-color day-nonWorking"></span><span class="day-text">Non-working Day</span>
-    <span class="day-color day-bankHoliday"></span><span class="day-text">Bank Holiday</span>
+  <dl>
+    <dt>Legend</dt>
+    <dd class="col-xs-4">
+      <span class="day-color day-today"></span><br>
+      Today
+    </dd>
+    <dd class="col-xs-4">
+      <span class="day-color day-nonWorking"></span><br>
+      Non-working Day
+    </dd>
+    <dd class="col-xs-4">
+      <span class="day-color day-bankHoliday"></span><br>
+      Bank Holiday
+    </dd>
+  </dl>
+</div>
+
+<div class="row leave-color-legend">
+  <div class="col-xs-12">
+    <!-- WORKING ON IT -->
   </div>
-  <div class="col-xs-2">&nbsp;</div>
 </div>
 
 <div class="row">&nbsp;</div>
