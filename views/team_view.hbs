@@ -48,6 +48,12 @@
       <span class="day-color day-bankHoliday"></span><br>
       Bank Holiday
     </dd>
+    {{#each leave_types}}
+    <dd class="col-xs-4">
+      <span class="day-color" style="background-color: {{this.color}};"></span><br>
+      {{this.name}}
+    </dd>
+    {{/each}}
   </dl>
 </div>
 
