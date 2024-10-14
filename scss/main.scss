@@ -401,6 +401,15 @@ div.feeds-holder {
   span.day-bankHoliday {
     background-color: $bankHoliday-color;
   }
+  dd {
+    padding-bottom: 15px;
+    &:nth-of-type(4n+1) {
+      clear: left;
+    }
+    &:nth-of-type(4n) {
+      clear: right;
+    }
+  }
 }
 
 /* Fix for issue with modal scrollings on mobiles */

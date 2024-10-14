@@ -36,20 +36,20 @@
 <div class="row day-color-legend">
   <dl>
     <dt>Legend</dt>
-    <dd class="col-xs-4">
+    <dd class="col-xs-3">
       <span class="day-color day-today"></span><br>
       Today
     </dd>
-    <dd class="col-xs-4">
+    <dd class="col-xs-3">
       <span class="day-color day-nonWorking"></span><br>
       Non-working Day
     </dd>
-    <dd class="col-xs-4">
+    <dd class="col-xs-3">
       <span class="day-color day-bankHoliday"></span><br>
       Bank Holiday
     </dd>
     {{#each leave_types}}
-    <dd class="col-xs-4">
+    <dd class="col-xs-3">
       <span class="day-color" style="background-color: {{this.color}};"></span><br>
       {{this.name}}
     </dd>

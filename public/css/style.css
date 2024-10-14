@@ -382,6 +382,15 @@ div.feeds-holder {
 .day-color-legend span.day-bankHoliday {
   background-color: #31b0d5;
 }
+.day-color-legend dd {
+  padding-bottom: 15px;
+}
+.day-color-legend dd:nth-of-type(4n+1) {
+  clear: left;
+}
+.day-color-legend dd:nth-of-type(4n) {
+  clear: right;
+}
 
 /* Fix for issue with modal scrollings on mobiles */
 @media (max-width: 768px) {
