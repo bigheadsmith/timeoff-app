@@ -379,13 +379,39 @@ div.feeds-holder {
   border: 1px solid #000000;
 }
 
-.day-color-legend{
+.day-color-legend {
   text-align: center;
   padding: 10px 0;
-  dt {
-    padding-bottom: 10px;
+  input[type="checkbox"] {
+    display: none;
   }
-  span.day-color{
+  input[type="checkbox"]:checked ~ .accordion-content {
+    max-height: 1000px;
+    transition: max-height 0.5s ease-in;
+  }
+  .accordion-label {
+    background: $link-color;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+  }
+  dl {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 0;
+  }
+  dd {
+    flex: 0 1 25%;
+    padding: 20px 20px 0;
+  }
+  span.day-color {
     display: inline-block;
     width: 15px;
     height: 15px;
@@ -400,15 +426,6 @@ div.feeds-holder {
   }
   span.day-bankHoliday {
     background-color: $bankHoliday-color;
-  }
-  dd {
-    padding-bottom: 15px;
-    &:nth-of-type(4n+1) {
-      clear: left;
-    }
-    &:nth-of-type(4n) {
-      clear: right;
-    }
   }
 }
 
