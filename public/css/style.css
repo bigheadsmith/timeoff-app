@@ -392,6 +392,11 @@ div.feeds-holder {
   flex: 0 1 25%;
   padding: 20px 0 0 0;
 }
+@media (max-width: 768px) {
+  .day-color-legend dd {
+    flex: 0 1 33.3333%;
+  }
+}
 .day-color-legend span.day-color {
   display: inline-block;
   width: 15px;
