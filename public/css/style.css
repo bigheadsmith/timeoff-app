@@ -390,7 +390,7 @@ div.feeds-holder {
 }
 .day-color-legend dd {
   flex: 0 1 25%;
-  padding: 20px 20px 0;
+  padding: 20px 0 0 0;
 }
 .day-color-legend span.day-color {
   display: inline-block;
