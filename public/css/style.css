@@ -363,8 +363,34 @@ div.feeds-holder {
   text-align: center;
   padding: 10px 0;
 }
-.day-color-legend dt {
-  padding-bottom: 10px;
+.day-color-legend input[type=checkbox] {
+  display: none;
+}
+.day-color-legend input[type=checkbox]:checked ~ .accordion-content {
+  max-height: 1000px;
+  transition: max-height 0.5s ease-in;
+}
+.day-color-legend .accordion-label {
+  background: #5ba4e5;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.day-color-legend .accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+.day-color-legend dl {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 0;
+}
+.day-color-legend dd {
+  flex: 0 1 25%;
+  padding: 20px 20px 0;
 }
 .day-color-legend span.day-color {
   display: inline-block;
@@ -381,15 +407,6 @@ div.feeds-holder {
 }
 .day-color-legend span.day-bankHoliday {
   background-color: #31b0d5;
-}
-.day-color-legend dd {
-  padding-bottom: 15px;
-}
-.day-color-legend dd:nth-of-type(4n+1) {
-  clear: left;
-}
-.day-color-legend dd:nth-of-type(4n) {
-  clear: right;
 }
 
 /* Fix for issue with modal scrollings on mobiles */

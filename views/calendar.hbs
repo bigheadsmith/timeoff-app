@@ -142,33 +142,26 @@
   </div>
 </div>
 
-<div class="row day-color-legend">
-  <dl>
-    <dt>Legend</dt>
-    <dd class="col-xs-3">
-      <span class="day-color day-today"></span><br>
-      Today
-    </dd>
-    <dd class="col-xs-3">
-      <span class="day-color day-nonWorking"></span><br>
-      Non-working Day
-    </dd>
-    <dd class="col-xs-3">
-      <span class="day-color day-bankHoliday"></span><br>
-      Bank Holiday
-    </dd>
-    {{#each leave_types}}
-    <dd class="col-xs-3">
-      <span class="day-color" style="background-color: {{this.color}};"></span><br>
-      {{this.name}}
-    </dd>
-    {{/each}}
-  </dl>
-</div>
-
-<div class="row leave-color-legend">
-  <div class="col-xs-12">
-    <!-- WORKING ON IT -->
+<div class="day-color-legend">
+  <input type="checkbox" id="accordion-toggle" hidden />
+  <label for="accordion-toggle" class="accordion-label">Legend</label>
+  <div class="accordion-content">
+    <dl>
+      <dd class="legend-item">
+        <span class="day-color day-today"></span><br>Today
+      </dd>
+      <dd class="legend-item">
+        <span class="day-color day-nonWorking"></span><br>Non-working Day
+      </dd>
+      <dd class="legend-item">
+        <span class="day-color day-bankHoliday"></span><br>Bank Holiday
+      </dd>
+      {{#each leave_types}}
+      <dd class="legend-item">
+        <span class="day-color" style="background-color: {{this.color}};"></span><br>{{this.name}}
+      </dd>
+      {{/each}}
+    </dl>
   </div>
 </div>
 
