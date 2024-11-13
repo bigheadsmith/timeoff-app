@@ -14,7 +14,8 @@
     "allowregistration": false,
     "forceleaveselect": false,
     "localecode": "en",
-    "sendemail": false
+    "sendemail": false,
+    "teamview": "all"
   },
   "smtp": {
     "host": "localhost",
